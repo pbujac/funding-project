@@ -1,0 +1,6 @@
+node_modules/**
+dist/**
+dist-server/**
+coverage/**
+webpack.config.dev.babel.js
+webpack.config.prod.babel.js

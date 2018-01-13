@@ -1,0 +1,6 @@
+{
+  "short_name": "tacit",
+  "name": "Product List Page Task",
+  "start_url": "./index.html",
+  "display": "standalone"
+}
