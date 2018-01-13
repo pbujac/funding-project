@@ -1,0 +1,25 @@
+$_basket-icon-size: rem-calc(40);
+$_basket-icon-length-size: $_basket-icon-size / 2;
+
+&__basket {
+  &__items {
+    position: relative;
+    width: $_basket-icon-size;
+    height: $_basket-icon-size;
+
+    &__length {
+      width: $_basket-icon-length-size;
+      height: $_basket-icon-length-size;
+      border-radius: $_basket-icon-length-size;
+      background-color: $white;
+      color: $blue;
+      font-size: rem-calc(10);
+      position: absolute;
+      bottom: 0;
+      right: rem-calc(5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

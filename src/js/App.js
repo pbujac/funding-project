@@ -1,5 +1,9 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Routes from './components/Routes/Routes';
 
-const App = () => <div>Product List Page</div>;
-
-export default App;
+export default () => (
+  <BrowserRouter>
+    <Routes />
+  </BrowserRouter>
+);

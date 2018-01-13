@@ -26,10 +26,10 @@ export default {
       '.png'
     ],
     alias: {
-      images: path.resolve(__dirname, 'src/assets/images'),
-      components: path.resolve(__dirname, 'src/js/components'),
-      modules: path.resolve(__dirname, 'src/js/modules'),
-      utils: path.resolve(__dirname, 'src/js/utils')
+      Images: path.resolve(__dirname, 'src/assets/images'),
+      Components: path.resolve(__dirname, 'src/js/components'),
+      Views: path.resolve(__dirname, 'src/js/views'),
+      Utils: path.resolve(__dirname, 'src/js/utils')
     }
   },
   module: {

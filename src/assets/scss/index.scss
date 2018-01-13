@@ -1,4 +1,7 @@
-html {
-    padding: 10px;
-    background: rgb(175, 119, 128);
-}
+@import 'vendors/vendors';
+@import 'tools/tools';
+@import 'utils/utils';
+@import 'base/base';
+@import 'layout/layout';
+@import 'pages/pages';
+@import 'components/components';
