@@ -22,6 +22,12 @@ npm install
 npm start
 ```
 
+Generate production mode:
+
+```
+npm install
+npm run production
+```
 ## Screenshots
 
 ### Product List Page
