@@ -1,0 +1,30 @@
+$_page-title-height: 250;
+
+.page-title {
+  width: 100%;
+  height: rem-calc($_page-title-height);
+  background-color: $medium-blue;
+  text-align: center;
+  padding: rem-calc($_page-title-height / 6) 0;
+
+  @include mobile-tablet {
+    padding: 0;
+    height: rem-calc(90);
+    line-height: rem-calc(90);
+  }
+
+  &__name {
+    font-size: rem-calc(24);
+    font-weight: 600;
+    font-family: $base-font-family;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: rem-calc(2);
+    margin-bottom: rem-calc(20);
+
+    @include mobile {
+      font-size: rem-calc(18);
+    }
+  }
+  @import 'breadcrumb';
+}

@@ -1,0 +1,23 @@
+&__small {
+  width: 30%;
+
+  &__figcaption {
+    padding: 0 40%;
+  }
+
+  @include mobile-tablet {
+    width: 100%;
+    background-size: 100% rem-calc(320);
+  }
+
+  @include tablet {
+    width: 40%;
+    padding: 0;
+    background-position: left;
+
+    &__figcaption {
+      text-align: center;
+      padding: rem-calc(30);
+    }
+  }
+}

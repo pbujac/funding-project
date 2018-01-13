@@ -3,6 +3,7 @@ $_button-background-color-hover: shade($action-color, 20%);
 button {
     background: transparent;
     border: none;
+    cursor: pointer;
     &:hover {
         background-color: $_button-background-color-hover;
         color: contrast-switch($_button-background-color-hover);

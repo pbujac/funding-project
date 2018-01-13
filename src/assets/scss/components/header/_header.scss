@@ -15,7 +15,7 @@
 
   &__logo {
     width: 20%;
-    font-weight: bold;
+    font-weight: 900;
     font-style: italic;
     font-size: rem-calc(24);
   }
@@ -24,6 +24,7 @@
     width: 60%;
     font-size: rem-calc(12);
     text-transform: uppercase;
+
     @include mobile-tablet {
       display: none;
     }
@@ -31,12 +32,17 @@
 
   &__right-menu {
     width: 20%;
+
     &__basket,
     &__search {
       padding: 0 rem-calc(15);
       fill: $white;
     }
+
+    &__search {
+      width: rem-calc(40);
+      height: rem-calc(40);
+    }
     @import 'basket';
-    @import 'search';
   }
 }

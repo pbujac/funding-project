@@ -1,0 +1,17 @@
+&__breadcrumb {
+  font-size: rem-calc(14);
+
+  @include mobile-tablet {
+    display: none;
+  }
+
+  &__item {
+    &:nth-last-child(n + 2) {
+      &:after {
+        content: '▶';
+        font-size: rem-calc(5);
+        color: $white;
+      }
+    }
+  }
+}

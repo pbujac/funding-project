@@ -2,14 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import Header from 'Components/Header/Header';
+import PageTitle from 'Components/PageTitle/PageTitle';
+import BannerContainer from 'Components/BannerContainer/BannerContainer';
+import BannerCarousel from 'Components/BannerCarousel/BannerCarousel';
 
 const PageLayout = props => (
   <div>
     <Header />
-    <div className="grid-container fluid">
-      <div className="grid-x grid-margin-x">
-        <main>{props.children}</main>
-      </div>
+    <PageTitle />
+    <div className="container">
+      <BannerContainer />
+      <main>{props.children}</main>
+      <BannerCarousel />
     </div>
   </div>
 );
