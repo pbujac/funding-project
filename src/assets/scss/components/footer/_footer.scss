@@ -1,3 +1,21 @@
-@import 'social';
-@import 'contact-details';
-@import 'credit-cards';
+$_header-section-bottom: 55;
+.footer {
+  background-color: $grey;
+  color: $white;
+
+  &__left,
+  &__center,
+  &__right {
+    text-align: center;
+    margin: rem-calc(25) 0;
+
+    @include breakpoint(large) {
+      margin: rem-calc(45) 0;
+      text-align: left;
+    }
+  }
+
+  @import 'left-block';
+  @import 'center-block';
+  @import 'right-block';
+}

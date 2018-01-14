@@ -1,15 +1,12 @@
 &__large {
-  width: 70%;
+  display: none;
+
+  @include breakpoint(medium) {
+    display: inline-flex;
+    width: 70%;
+  }
 
   &__figcaption {
     padding: 0 10%;
-  }
-
-  @include tablet {
-    width: 60%;
-  }
-
-  @include mobile-tablet {
-    display: none;
   }
 }

@@ -5,6 +5,7 @@ import Header from 'Components/Header/Header';
 import PageTitle from 'Components/PageTitle/PageTitle';
 import BannerContainer from 'Components/BannerContainer/BannerContainer';
 import BannerCarousel from 'Components/BannerCarousel/BannerCarousel';
+import Footer from 'Components/Footer/Footer';
 
 const PageLayout = props => (
   <div>
@@ -15,6 +16,7 @@ const PageLayout = props => (
       <main>{props.children}</main>
       <BannerCarousel />
     </div>
+    <Footer />
   </div>
 );
 

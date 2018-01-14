@@ -1,0 +1,55 @@
+&__center {
+  &__nav {
+    margin-bottom: rem-calc($_header-section-bottom);
+    text-transform: uppercase;
+    font-size: rem-calc(12);
+    font-weight: 600;
+    &__list {
+      &__item {
+        display: block;
+        margin-bottom: rem-calc(10);
+
+        @include breakpoint(small-medium) {
+          display: inline;
+          margin: 0;
+        }
+        &__link {
+          padding: 0;
+          padding-right: rem-calc(30);
+        }
+      }
+    }
+  }
+  &__subscription-form {
+    &__input,
+    &__submit {
+      display: block;
+      width: 100%;
+      height: rem-calc(40);
+      margin-bottom: rem-calc(10);
+
+      @include breakpoint(medium) {
+        display: inline;
+        margin: 0;
+
+      }
+    }
+    &__input {
+      @include breakpoint(medium) {
+        width: 65%;
+      }
+    }
+    &__submit {
+      background-color: $white;
+
+      @include breakpoint(medium) {
+        width: 25%;
+        background-color: $white;
+        border: none;
+        padding: 0;
+        float: right;
+        margin-right: rem-calc(30);
+      }
+    }
+  }
+}

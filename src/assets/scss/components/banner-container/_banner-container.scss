@@ -1,10 +1,10 @@
 .banner-container {
-  margin-top: rem-calc(-80);
-  height: rem-calc(320);
   display: flex;
+  height: rem-calc(320);
+  margin-top: 0;
 
-  @include mobile-tablet {
-    margin-top: 0;
+  @include breakpoint(large) {
+    margin-top: rem-calc(-80);
   }
 
   &__small,
@@ -13,9 +13,13 @@
     flex-direction: column;
     justify-content: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     align-content: center;
+    background-position: center;
+    background-size: 100% rem-calc(320);
+
+    @include breakpoint(medium){
+      background-size: cover;
+    }
 
     &__figcaption {
       color: $white;

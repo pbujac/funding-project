@@ -1,6 +1,6 @@
 import React from 'react';
-import Nav from 'Components/Nav/Nav';
-import Logo from 'Components/Logo/Logo';
+import Nav from './Nav';
+import Logo from './Logo';
 import Basket from './Basket';
 import Search from './Search';
 

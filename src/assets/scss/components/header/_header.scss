@@ -5,12 +5,16 @@
   height: rem-calc(80);
 
   &__logo,
-  &__nav,
-  &__right-menu {
-    display: table-cell;
+  &__right-menu,
+  &__nav {
     vertical-align: middle;
     text-align: center;
     color: $white;
+  }
+
+  &__logo,
+  &__right-menu {
+    display: table-cell;
   }
 
   &__logo {
@@ -21,24 +25,23 @@
   }
 
   &__nav {
-    width: 60%;
-    font-size: rem-calc(12);
-    text-transform: uppercase;
+    display: none;
 
-    @include mobile-tablet {
-      display: none;
+    @include breakpoint(medium) {
+      display: table-cell;
+      width: 60%;
+      font-size: rem-calc(12);
+      text-transform: uppercase;
     }
   }
 
   &__right-menu {
     width: 20%;
-
     &__basket,
     &__search {
       padding: 0 rem-calc(15);
       fill: $white;
     }
-
     &__search {
       width: rem-calc(40);
       height: rem-calc(40);

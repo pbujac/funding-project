@@ -4,14 +4,19 @@
   }
 }
 
-@mixin tablet {
-  @media (min-width: rem-calc(768px)) and (max-width: rem-calc(1192px)) {
+@mixin mobile-tablet {
+  @media (max-width: rem-calc(1192px)){
+    @content;
+  }
+}
+@mixin tablet-up {
+  @media (min-width: rem-calc(480px)){
     @content;
   }
 }
 
-@mixin mobile-tablet {
-  @media ( max-width: rem-calc(767px)) {
+@mixin tablet {
+  @media ( min-width: rem-calc(480px)) and (max-width: rem-calc(1192px)) {
     @content;
   }
 }
