@@ -1,0 +1,35 @@
+.pagination {
+  width: 100%;
+  height: rem-calc(70);
+  text-align: center;
+  margin: 0 auto;
+
+  &__item {
+    &:hover{
+      cursor: pointer;
+      color: $blue;
+
+    }
+    &--active{
+      border: $base-border;
+      border-radius: 50%;
+    }
+
+    font-size: rem-calc(14);
+    padding: rem-calc(15) rem-calc(20);
+
+    &__left,
+    &__right {
+      border: solid $light-grey;
+      border-width: 0 rem-calc(1) rem-calc(1) 0;
+      display: inline-block;
+      padding: rem-calc(5);
+    }
+    &__left {
+      transform: rotate(135deg);
+    }
+    &__right {
+      transform: rotate(-45deg);
+    }
+  }
+}

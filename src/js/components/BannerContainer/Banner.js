@@ -1,5 +1,5 @@
 import React from 'react';
-import banner from 'Images/banner/banner1.png';
+import banner from 'Images/products/item1.png';
 
 const figureStyle = {
   backgroundImage: `url('${banner}')`,

@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Product from 'Components/Product/Product';
+import product from 'Images/products/item1.png';
 
 export default class ProductList extends Component {
   constructor(props) {
@@ -7,6 +9,17 @@ export default class ProductList extends Component {
   }
 
   render() {
-    return <h1>Product List Page</h1>;
+    return (
+      <section className="product-list grid-x grid-margin-x">
+        <Product product={product} />
+        <Product product={product} />
+        <Product product={product} />
+        <Product product={product} />
+        <Product product={product} />
+        <Product product={product} />
+        <Product product={product} />
+        <Product product={product} />
+      </section>
+    );
   }
 }
