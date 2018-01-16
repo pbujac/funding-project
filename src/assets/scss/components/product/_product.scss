@@ -1,96 +1,108 @@
 $_width-items: 90;
 .product {
-  border: $base-border;
-  padding: rem-calc(10);
-  margin-bottom: rem-calc(20);
-
-  @include breakpoint(large){
-    padding: rem-calc(20);
-  }
-  @include breakpoint(xxlarge){
-    padding: rem-calc(40);
-  }
-
-  &__figure{
-    text-align: center;
-    &__image {
-      padding: rem-calc(20);
+    border: $base-border;
+    padding: rem-calc(10);
+    margin-bottom: rem-calc(30);
+    @include breakpoint(large) {
+        padding: rem-calc(20);
     }
-  }
-
-  &__title {
-    font-size: rem-calc(18);
-    font-family: $heading-font-family;
-    margin: rem-calc(10) 0;
-  }
-  &__price {
-    &__discount,
-    &__real {
-      display: inline-block;
-      width: 40%;
-      font-size: rem-calc(14);
-      font-weight: 600;
-      color: $light-blue;
+    @include breakpoint(xxlarge) {
+        padding: rem-calc(40);
     }
-    &__discount {
-      color: $blue;
+    &__header {
+        &__figure {
+            text-align: center;
+            margin-bottom: rem-calc(30);
+            &__image {
+                height: rem-calc(165);
+            }
+        }
     }
-    &__real {
-      &--has-discount {
-        text-decoration: line-through;
-      }
+    &__main {
+        &__title {
+            font-size: rem-calc(18);
+            font-family: $heading-font-family;
+            margin: rem-calc(10) 0;
+        }
+        &__price {
+            &__discount,
+            &__real {
+                display: inline-block;
+                font-size: rem-calc(14);
+                font-weight: 600;
+                color: $light-blue;
+            }
+            &__discount {
+                text-decoration: line-through;
+                &--no-discount {
+                    display: none;
+                }
+            }
+            &__real {
+                margin-right: 10%;
+                color: $blue;
+                &--has-discount {
+                    float: right;
+                }
+            }
+        }
+        &__items {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            &__counter,
+            &__submit {
+                background-color: $button-grey;
+                display: inline-block;
+            }
+            &__counter {
+                border: $base-border;
+                border-radius: rem-calc(30);
+                justify-content: center;
+                vertical-align: middle;
+                width: rem-calc(90);
+                height: rem-calc(40);
+                &__button,
+                &__quantity {
+                    height: 100%;
+                    display: inline-block;
+                    font-size: rem-calc(14);
+                    font-weight: 700;
+                    background-color: transparent;
+                    text-align: center;
+                    padding: 0;
+                    margin: 0;
+                }
+                &__button {
+                    border: none;
+                    width: rem-calc(25);
+                    padding: 0 rem-calc(10);
+                    font-size: rem-calc(16);
+                }
+                &__quantity {
+                    width: rem-calc(35);
+                    text-align: center;
+                    padding: 0;
+                    border: none;
+                }
+            }
+            &__submit {
+                width: rem-calc(115);
+                border: $base-border;
+                border-radius: rem-calc(40);
+                background-color: $blue;
+                color: $white;
+                &__add {
+                    margin-right: rem-calc(2);
+                }
+                &--remove {
+                    background-color: $red;
+                }
+            }
+        }
     }
-  }
-  &__form {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    &__items,
-    &__submit {
-      background-color: $button-grey;
-      display: inline;
-    }
-    &__items {
-      border: $base-border;
-      border-radius: rem-calc(30);
-      justify-content: center;
-      vertical-align: middle;
-      width: rem-calc(90);
-      &__button,
-      &__input {
-        height: rem-calc(35);
-        display: inline;
-        font-size: rem-calc(14);
-        background-color: transparent;
-        text-align: center;
-        padding: 0;
-      }
-
-      &__button {
-        border: none;
-        width: rem-calc(25);
-        padding: 0;
-      }
-      &__input {
-        width: rem-calc(35);
-        text-align: center;
-        padding: 0;
-        border: none;
-      }
-    }
-    &__submit {
-      width: rem-calc(115);
-      border: $base-border;
-      border-radius: rem-calc(40);
-      background-color: $blue;
-      color: $white;
-      &__add{
-        margin-right: rem-calc(2);
-      }
-
-    }
-  }
 }
+
 // .product{
 //   &__header, &__main{
 //     display: block;
@@ -98,6 +110,5 @@ $_width-items: 90;
 //       display: inline-block;
 //       width: 50%;
 //     }
-
 //   }
 // }

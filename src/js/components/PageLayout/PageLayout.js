@@ -9,7 +9,6 @@ import Footer from 'Components/Footer/Footer';
 import SponsorList from 'Components/SponsorList/SponsorList';
 import FilterList from 'Components/Filters/FilterList';
 import FiltersSidebar from 'Components/Filters/FiltersSidebar';
-import Pagination from 'Components/Pagination/Pagination';
 
 const PageLayout = props => (
   <div>
@@ -20,8 +19,9 @@ const PageLayout = props => (
       <FilterList />
       <div className="grid-x">
         <FiltersSidebar />
+
         <main className="medium-8 large-9">{props.children}</main>
-        <Pagination />
+
       </div>
     </div>
     <BannerCarousel />

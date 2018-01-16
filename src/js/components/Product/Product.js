@@ -1,37 +1,104 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import Counter from './Counter';
 
-const Product = product => (
-  <article className="product product-small large-4 medium-6 small-12 cell">
-    <header className="product__header">
-      <figure className="product__figure">
-        <img className="product__figure__image" href={product.product} alt="product" />
-      </figure>
-    </header>
-    <main className="product__main">
-      <p className="product__title">Essential cotton-blend</p>
-      <div className="product__price">
-        <p className="product__price__real product__price__real--has-discount">
-          $100 USD
-        </p>
-        <p className="product__price__discount"> $200 USD</p>
-      </div>
-      <form className="product__form">
-        <div className="product__form__items">
-          <button className="product__form__items__button">+</button>
-          <input
-            className="product__form__items__input"
-            disabled
-            value="2"
-            type="number"
+class Product extends Component {
+  constructor(props) {
+    super(props);
+    const product = props.product;
+    this.state = {
+      product,
+      isAdded: false,
+    };
+
+    this.incrementCounter = this.updateCounter.bind(this, 1);
+    this.decrementCounter = this.updateCounter.bind(this, -1);
+    this.addToCartHandler = this.addToCartHandler.bind(this);
+    this.removeFromCartHandler = this.removeFromCartHandler.bind(this);
+  }
+
+  updateCounter(count) {
+    const product = this.state.product;
+    product.quantity += count;
+
+    this.setState({ product });
+  }
+
+  addToCartHandler() {
+    const product = this.state.product;
+
+    this.setState({ product, isAdded: true });
+    this.props.addToCartHandler(Object.assign({}, this.state.product));
+  }
+
+  removeFromCartHandler() {
+    const product = this.state.product;
+    product.quantity = 1;
+    this.setState({ product, isAdded: false });
+    this.props.removeFromCartHandler(Object.assign({}, this.state.product));
+  }
+
+
+  render() {
+    const product = this.state.product;
+
+    return (
+      <article className="product product-small large-4 medium-6 small-12 cell">
+
+        <header className="product__header">
+          <figure className="product__header__figure">
+            <img className="product__header__figure__image" src={product.image} alt="product" />
+          </figure>
+        </header>
+
+        <main className="product__main">
+          <p className="product__main__title">{product.name}</p>
+
+          <div className="product__main__price">
+            <p className={product.discountPrice
+              ? 'product__main__price__discount'
+              : 'product__main__price__discount--no-discount'}
+            >
+              {product.currency} {product.discountPrice} USD
+            </p>
+            <p className={`product__main__price__real ${product.discountPrice
+              ? ' product__main__price__real--has-discount'
+              : ''}`}
+            >
+              {product.currency}  {product.price} USD
+            </p>
+          </div>
+
+          <Counter
+            product={product}
+            decrementCounter={this.decrementCounter}
+            incrementCounter={this.incrementCounter}
           />
-          <button className="product__form__items__button">-</button>
-        </div>
-        <button className="product__form__submit">
-          <span className="product__form__submit__add">+</span> Add To Card
-        </button>
-      </form>
-    </main>
-  </article>
-);
+          <div className="product__main__items">
+
+
+            {!this.state.isAdded ? (
+              <button className="product__main__items__submit" onClick={this.addToCartHandler}>
+                <span className="product__main__items__submit__add">+</span>
+                Add To Cart
+              </button>
+            ) : (
+              <button className="product__main__items__submit product__main__items__submit--remove" onClick={this.removeFromCartHandler}>
+                <span className="product__main__items__submit__add">-</span>
+                  Remove All
+              </button>
+              )}
+
+          </div>
+        </main>
+      </article >
+    );
+  }
+}
+Product.propTypes = {
+  product: PropTypes.object.isRequired,
+  addToCartHandler: PropTypes.func.isRequired,
+  removeFromCartHandler: PropTypes.func.isRequired,
+};
 
 export default Product;

@@ -37,8 +37,8 @@ const FilterList = () => (
     </li>
 
     <li className="filter-list__item filter-list__item--show-medium filter-list__item--centered medium-4 large-3">
-      <select className="filter-list__item__select">
-        <option disabled selected>
+      <select defaultValue="1" className="filter-list__item__select">
+        <option disabled value="1">
           Sort by: Price
         </option>
         <option value="volvo">Volvo</option>
@@ -48,8 +48,8 @@ const FilterList = () => (
       </select>
     </li>
     <li className="filter-list__item filter-list__item--show-medium filter-list__item--centered medium-3 large-3">
-      <select className="filter-list__item__select">
-        <option disabled selected>
+      <select defaultValue="1" className="filter-list__item__select">
+        <option disabled value="1">
           Show : 16
         </option>
         <option value="volvo">Volvo</option>

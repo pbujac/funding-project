@@ -1,0 +1,46 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Runnning"
+    },
+    {
+      "id": 2,
+      "name": "Lifestyle"
+    }
+  ],
+  "sizes": [
+    {
+      "id": 1,
+      "name": "S"
+    },
+    {
+      "id": 2,
+      "name": "M"
+    },
+    {
+      "id": 3,
+      "name": "L"
+    }
+  ],
+  "prices": [
+    {
+      "id": 1,
+      "min": 10,
+      "max": 20
+    },
+    {
+      "id": 2,
+      "min": 20,
+      "max": 50000
+    }
+  ],
+  "itemsView": [
+    {
+      "offset": 10
+    },
+    {
+      "offset": 20
+    }
+  ]
+}

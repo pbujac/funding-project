@@ -1,7 +1,9 @@
 {
   "parser": "babel-eslint",
   "extends": "airbnb",
-  "plugins": ["import"],
+  "plugins": [
+    "import"
+  ],
   "settings": {
     "import/resolver": "webpack"
   },
@@ -10,12 +12,40 @@
     "node": true,
     "es6": true
   },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  },
   "rules": {
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
     "import/no-unresolved": 0,
     "import/no-extraneous-dependencies": 0,
     "import/extensions": 0,
     "import/first": 0,
-    "import/no-dynamic-require": 0
+    "react/no-typos": "off",
+    "import/no-named-as-default": "off",
+    "import/prefer-default-export": "off",
+    "jsx-a11y/href-no-hash": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react-native/split-platform-components": "off",
+    "import/no-dynamic-require": 0,
+    "react/no-unused-state": "off",
+    "react/forbid-prop-types": "off",
+    "prefer-destructuring": [
+      "error",
+      {
+        "object": false,
+        "array": false
+      }
+    ]
   }
 }

@@ -1,6 +1,7 @@
 import webpack from 'webpack';
 import path from 'path';
 import ExtractTextWebpackPlugin from 'extract-text-webpack-plugin';
+
 const buildPath = path.resolve(__dirname, './dist');
 const sourcePath = path.resolve(__dirname, './src');
 const staticSourcePath = path.join(__dirname, './public');
@@ -26,8 +27,12 @@ export default {
       '.png'
     ],
     alias: {
-      Images: path.resolve(__dirname, 'src/assets/images'),
+      Images: path.resolve(__dirname, 'public/images'),
+      Api: path.resolve(__dirname, 'src/js/services/api'),
       Components: path.resolve(__dirname, 'src/js/components'),
+      Constants: path.resolve(__dirname, 'src/js/redux/constants'),
+      Reducers: path.resolve(__dirname, 'src/js/redux/reducers'),
+      Actions: path.resolve(__dirname, 'src/js/redux/actions'),
       Views: path.resolve(__dirname, 'src/js/views'),
       Utils: path.resolve(__dirname, 'src/js/utils')
     }
@@ -88,6 +93,9 @@ export default {
   devServer: {
     contentBase: staticSourcePath,
     historyApiFallback: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*'
+    },
     port: 3000,
     open: true
   },
