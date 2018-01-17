@@ -2,7 +2,11 @@
   width: 100%;
   height: rem-calc(70);
   text-align: center;
-  margin: 0 auto;
+  margin: rem-calc(20) auto 0;
+
+  @include breakpoint(large){
+    margin: 0 auto;
+  }
 
   &__item {
     font-size: rem-calc(14);

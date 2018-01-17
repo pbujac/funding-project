@@ -8,6 +8,7 @@
       height: rem-calc(250);
       object-fit: cover;
     }
+
     &__caption {
       position: absolute;
       width: 90%;
@@ -27,6 +28,7 @@
         height: 70%;
         width: 40%;
       }
+
       @include breakpoint(large) {
         height: 60%;
         width: 25%;
@@ -43,6 +45,7 @@
         line-height: 1.5;
         letter-spacing: rem-calc(2);
       }
+
       &__title {
         font-family: $heading-font-family;
         font-size: rem-calc(30);

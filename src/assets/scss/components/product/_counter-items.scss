@@ -3,12 +3,14 @@
   justify-content: space-between;
   width: 100%;
   transition: all 0.5s ease;
+
   &__counter,
   &__submit {
     background-color: $button-grey;
     display: inline-block;
     transition: all 0.5s ease;
   }
+
   &__counter {
     border: $base-border;
     border-radius: rem-calc(30);
@@ -16,6 +18,7 @@
     vertical-align: middle;
     width: rem-calc(90);
     height: rem-calc(40);
+
     &__button,
     &__quantity {
       height: 100%;
@@ -28,12 +31,14 @@
       margin: 0;
       transition: all 0.5s ease;
     }
+
     &__button {
       border: none;
-      width: rem-calc(25);
+      width: rem-calc(2);
       padding: 0 rem-calc(10);
       font-size: rem-calc(16);
     }
+
     &__quantity {
       width: rem-calc(35);
       text-align: center;
@@ -41,6 +46,7 @@
       border: none;
     }
   }
+
   &__submit {
     width: rem-calc(115);
     border: $base-border;
@@ -48,9 +54,11 @@
     background-color: $blue;
     color: $white;
     transition: all 0.5s ease;
+
     &__add {
       margin-right: rem-calc(2);
     }
+
     &--remove {
       background-color: $red;
     }

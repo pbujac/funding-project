@@ -2,18 +2,67 @@ $_width-items: 90;
 .product {
   border: $base-border;
   padding: rem-calc(10);
-  margin-bottom: rem-calc(30);
+  margin-bottom: rem-calc(0);
+  margin-left: 0;
   transition: all 0.5s ease;
+
+  @include breakpoint(medium){
+    margin-left: rem-calc(10);
+  }
+  @include breakpoint(large){
+    margin-bottom: rem-calc(30);
+    margin-left: 0;
+  }
+
   @include breakpoint(large) {
     padding: rem-calc(20);
   }
+
   @include breakpoint(xxlarge) {
     padding: rem-calc(40);
   }
+
   &__small {
     width: 100%;
   }
   @import 'header';
   @import 'main';
+}
 
+.base-product {
+  padding: rem-calc(20) rem-calc(10) 0;
+  transition: all 0.5s ease;
+
+  &:nth-child(2n) {
+    padding-right: rem-calc(10);
+  }
+
+  @include breakpoint(large) {
+    padding: 0 rem-calc(30) 0 0;
+
+    &:nth-child(2n) {
+      padding-right: rem-calc(30);
+    }
+
+    &:nth-child(3n+ 0) {
+      padding-right: 0;
+    }
+  }
+
+  &--small {
+    transition: all 0.5s ease;
+
+    &:nth-child(2n) {
+      padding-right: rem-calc(10);
+    }
+
+    @include breakpoint(large) {
+      padding: 0;
+    }
+    @include breakpoint(xlarge){
+      &:nth-child(2n) {
+        padding-right: 0;
+      }
+    }
+  }
 }

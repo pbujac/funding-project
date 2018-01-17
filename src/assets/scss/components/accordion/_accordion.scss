@@ -3,18 +3,22 @@
   border-left: $base-border;
   border-right: $base-border;
   transition: all 0.3s ease-in-out;
+
   &__title {
     display: inline-block;
     transition: all 0.3s ease-in-out;
     width: 100%;
-    @include breakpoint(large) {
-      width: 85%;
-    }
     border-bottom: rem-calc(1) solid $button-grey;
     padding: rem-calc(25) rem-calc(30);
+
     @include breakpoint(large) {
       margin: 0 rem-calc(30);
     }
+
+    @include breakpoint(large) {
+      width: 85%;
+    }
+
     &__arrow {
       &:before {
         content: '';
@@ -28,6 +32,7 @@
         border-right: 2px solid rgb(0, 0, 0);
         transition: 0.3s;
       }
+
       &--show {
         &:before {
           transform: rotate(-135deg);
@@ -46,6 +51,7 @@
         float: right;
       }
     }
+
     &__name {
       font-size: rem-calc(14);
       font-weight: 700;
@@ -57,6 +63,7 @@
       height: 100%;
     }
   }
+
   &__body {
     color: $black;
     z-index: 2;
@@ -65,18 +72,19 @@
     transition-property: all;
     transition-duration: .5s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+
     &--selected {
       display: block;
       max-height: rem-calc(450);
       transition: all 0.3s ease-in-out;
       padding: rem-calc(20) rem-calc(15);
-      @include breakpoint(large) {
-        padding: rem-calc(20) 0;
-      }
-
       color: $black;
       z-index: 2;
       overflow-y: hidden;
+
+      @include breakpoint(large) {
+        padding: rem-calc(20) 0;
+      }
     }
   }
 }

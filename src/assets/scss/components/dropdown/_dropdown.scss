@@ -3,12 +3,15 @@
   margin-left: rem-calc(10);
   width: 35%;
   height: 100%;
+
   @include breakpoint(xxlarge) {
     width: 50%;
   }
+
   &__label {
     width: 25%;
   }
+
   &__choices {
     width: 75%;
   }

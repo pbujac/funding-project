@@ -44,52 +44,54 @@ export default class Product extends Component {
     const productGrid = this.props.productGrid;
 
     return (
-      <article className={`product cell ${productGrid ? 'medium-6 large-4' : 'small-12'}`}>
-        <header className="product__header">
-          <div className={product.isSale ? 'product__header__sale--active' : 'product__header__sale'}>sale</div>
-          <figure className="product__header__figure">
-            <img className="product__header__figure__image" src={product.image} alt="product" />
-          </figure>
-        </header>
+      <div className={`base-product cell ${productGrid ? 'medium-6 large-4' : 'small-12 base-product--small'}`}>
+        <article className="product">
+          <header className="product__header">
+            <div className={product.isSale ? 'product__header__sale--active' : 'product__header__sale'}>sale</div>
+            <figure className="product__header__figure">
+              <img className="product__header__figure__image" src={product.image} alt="product" />
+            </figure>
+          </header>
 
-        <main className="product__main">
-          <p className="product__main__title">{product.name}</p>
+          <main className="product__main">
+            <p className="product__main__title">{product.name}</p>
 
-          <div className="product__main__price">
-            <p className={product.discountPrice
+            <div className="product__main__price">
+              <p className={product.discountPrice
               ? 'product__main__price__discount'
               : 'product__main__price__discount--no-discount'}
-            >
-              {product.currency} {product.discountPrice} USD
-            </p>
-            <p className={`product__main__price__real ${product.discountPrice
+              >
+                {product.currency} {product.discountPrice} USD
+              </p>
+              <p className={`product__main__price__real ${product.discountPrice
               ? ' product__main__price__real--has-discount'
               : ''}`}
-            >
-              {product.currency}  {product.price} USD
-            </p>
-          </div>
+              >
+                {product.currency}  {product.price} USD
+              </p>
+            </div>
 
-          <div className="product__main__items">
-            <Counter
-              product={product}
-              decrementCounter={this.decrementCounter}
-              incrementCounter={this.incrementCounter}
-            />
-            {!this.state.isAdded ? (
-              <button className="product__main__items__submit" onClick={this.addToCartHandler}>
-                <span className="product__main__items__submit__add">+</span>
+            <div className="product__main__items">
+              <Counter
+                product={product}
+                decrementCounter={this.decrementCounter}
+                incrementCounter={this.incrementCounter}
+              />
+              {!this.state.isAdded ? (
+                <button className="product__main__items__submit" onClick={this.addToCartHandler}>
+                  <span className="product__main__items__submit__add">+</span>
                 Add To Cart
-              </button>
+                </button>
             ) : (
               <button className="product__main__items__submit product__main__items__submit--remove" onClick={this.removeFromCartHandler}>
                 <span className="product__main__items__submit__add">-</span>
                   Remove All
               </button>
               )}
-          </div>
-        </main>
-      </article>
+            </div>
+          </main>
+        </article>
+      </div>
     );
   }
 }

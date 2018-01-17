@@ -11,8 +11,8 @@
     "clean-dist": "rm -rf dist && mkdir dist",
     "remove-dist": "rm -rf ./dist",
     "prebuild": "npm run clean-dist",
-    "production": "NODE_ENV=production webpack --config webpack.config.prod.babel.js",
-    "postbuild": "babel-node tools/server.js"
+    "build": "NODE_ENV=production webpack --config webpack.config.prod.babel.js",
+    "postbuild": "babel-node server/server.js"
   },
   "author": "Petru Bujac",
   "license": "ISC",
@@ -59,10 +59,12 @@
     "eslint-plugin-jsx-a11y": "5.1.1",
     "eslint-plugin-react": "^7.5.1",
     "eslint-watch": "^3.1.3",
+    "express": "^4.16.2",
     "extract-text-webpack-plugin": "^3.0.2",
     "file-loader": "^1.1.6",
     "image-webpack-loader": "^3.4.2",
     "node-sass": "^4.7.2",
+    "open": "0.0.5",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "sass-lint": "^1.12.1",
     "sass-loader": "^6.0.6",

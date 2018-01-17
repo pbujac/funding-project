@@ -17,7 +17,15 @@ Make sure you have installed
 * NodeJS
 * NPM
 
+Prod Mode: 
 Open project and run in terminal:
+
+```
+npm install
+npm run build
+```
+
+Dev Mode: Open project and run in terminal:
 
 ```
 npm install

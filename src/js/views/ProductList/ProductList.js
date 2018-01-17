@@ -145,7 +145,7 @@ class ProductList extends Component {
         </section>
 
         <section className="medium-8 large-9">
-          <div className="product-list grid-x grid-margin-x">
+          <div className="product-list grid-x">
             {viewItemsProduct.length > 0
               ? viewItemsProduct.map(product => (
                 <Product

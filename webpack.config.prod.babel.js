@@ -2,8 +2,7 @@ import webpack from 'webpack';
 import path from 'path';
 import ExtractTextWebpackPlugin from 'extract-text-webpack-plugin';
 import OptimizeCSSAssets from 'optimize-css-assets-webpack-plugin';
-import CopyWebpackPlugin from 'copy-webpack-plugin';
-import CompressionPlugin from 'compression-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';;
 import UglifyJsWebpackPlugin from 'uglifyjs-webpack-plugin';
 
 const buildPath = path.resolve(__dirname, './dist');

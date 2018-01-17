@@ -1,6 +1,7 @@
 $base-border-filter: rem-calc(1) solid $light-grey;
 .filter-list {
   height: rem-calc(75);
+
   &__item {
     line-height: rem-calc(75);
     border-right: $base-border-filter;
@@ -22,6 +23,7 @@ $base-border-filter: rem-calc(1) solid $light-grey;
     &--centered {
       padding: 0 rem-calc(20);
     }
+
     &--show-medium {
       @include breakpoint(medium) {
         display: block;
@@ -39,13 +41,16 @@ $base-border-filter: rem-calc(1) solid $light-grey;
         display: none;
       }
     }
+
     &__title {
       height: 100%;
+
       &__name {
         @include breakpoint(large) {
           padding: 0 rem-calc(10);
         }
       }
+
       &__refresh {
         text-align: right;
         fill: $blue;
@@ -53,6 +58,7 @@ $base-border-filter: rem-calc(1) solid $light-grey;
         padding-top: rem-calc(5);
       }
     }
+
     &__button {
       height: rem-calc(75);
       display: block;
