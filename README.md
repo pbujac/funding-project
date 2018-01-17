@@ -22,12 +22,15 @@ npm install
 npm start
 ```
 
-Generate production mode:
-
-```
-npm install
-npm run production
-```
 ## Screenshots
 
 ### Product List Page
+
+###Desktop
+![Alt text](screenshots/screen1.png?raw=true "Desktop")
+
+###Tablet
+![Alt text](screenshots/screen2.png?raw=true "Tablet")
+
+###Mobile
+![Alt text](screenshots/screen3.png?raw=true "Mobile")
