@@ -32,7 +32,6 @@ npm start
   - Product - Remove from Basket
   - Product list (mock API)
   - Grid/List View icons products appearance (Chrome tested)
-  - Grid/List View icons products appearance (Chrome tested)
   - Pagination (all items & filtered items)
 
 ## Screenshots
