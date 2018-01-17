@@ -2,4 +2,17 @@
   @include breakpoint(large){
     padding:  rem-calc(30) 0 0 rem-calc(30);
   };
+
+  .base-product--list-view .product__header {
+    width: 25%;
+    margin-right: 30px;
+    display: inline-block;
+    vertical-align: middle
+  }
+
+  .base-product--list-view .product__main {
+    width: 65%;
+    vertical-align: middle;
+    display: inline-block
+  }
 }
