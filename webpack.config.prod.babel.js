@@ -19,6 +19,7 @@ export default {
     filename: 'index.js',
     publicPath: '/'
   },
+
   devServer: {
     contentBase: buildPath
   },
@@ -30,10 +31,20 @@ export default {
       '.js',
       '.jsx'
     ],
+      alias: {
+        Images: path.resolve(__dirname, './public/images'),
+        Api: path.resolve(__dirname, 'src/js/services/api'),
+        Components: path.resolve(__dirname, 'src/js/components'),
+        Constants: path.resolve(__dirname, 'src/js/redux/constants'),
+        Reducers: path.resolve(__dirname, 'src/js/redux/reducers'),
+        Actions: path.resolve(__dirname, 'src/js/redux/actions'),
+        Views: path.resolve(__dirname, 'src/js/views'),
+        Utils: path.resolve(__dirname, 'src/js/utils'),
+    },
     modules: [sourcePath, path.resolve(__dirname, 'node_modules')]
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: staticSourcePath }]),
+    new CopyWebpackPlugin([{from: staticSourcePath}]),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('production')
     }),
@@ -88,9 +99,9 @@ export default {
         })
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif)$/i,
         loaders: [
-          'file-loader?context=src/assets/images/&name=[path][name].[ext]',
+          'file-loader?context=public/images/&name=[path][name].[ext]',
           {
             loader: 'image-webpack-loader',
             query: {

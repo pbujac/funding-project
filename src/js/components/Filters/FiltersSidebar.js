@@ -1,101 +1,91 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Accordion from 'Components/Accordion/Accordion';
+import CategoryFilter from './CategoryFilter';
+import SizeFilter from './SizeFilter';
 
-const FiltersSidebar = () => (
-  <ul className="filter-sidebar medium-4 large-3">
-    <li className="filter-sidebar__item__category">
-      <Accordion title="Category Filter" >
-        <ul className="filter-sidebar__item__category__submenu">
-          <li className="filter-sidebar__item__category__submenu__item">
-            <input
-              type="checkbox"
-              className="filter-sidebar__item__category__submenu__item__checkbox"
+class FiltersSidebar extends Component {
+  constructor() {
+    super();
+    this.state = {
+      categoryFilterOptions: new Set(),
+      sizeFilterOptions: new Set(),
+    };
+    this.toggleCategoryFilter = this.toggleCategoryFilter.bind(this);
+    this.toggleSizeFilter = this.toggleSizeFilter.bind(this);
+  }
+
+  componentWillReceiveProps(props) {
+    if (props.reset) {
+      this.setState({
+        categoryFilterOptions: new Set(),
+        sizeFilterOptions: new Set(),
+      });
+    }
+  }
+  toggleCategoryFilter(filterObj) {
+    const filterItems = this.checkExistFilter(this.state.categoryFilterOptions, filterObj);
+    this.props.filterItems({
+      category: Array.from(filterItems),
+      size: Array.from(this.state.sizeFilterOptions),
+    });
+  }
+
+
+  toggleSizeFilter(filterObj) {
+    const filterItems = this.checkExistFilter(this.state.sizeFilterOptions, filterObj);
+    this.props.filterItems({
+      category: Array.from(this.state.categoryFilterOptions),
+      size: Array.from(filterItems),
+    });
+  }
+
+  checkExistFilter(filterItems, filterObj) {
+    const filterObjName = filterObj.name;
+
+    if (filterItems.has(filterObjName)) {
+      filterItems.delete(filterObjName);
+    } else {
+      filterItems.add(filterObjName);
+    }
+
+    this.setState({});
+    return filterItems;
+  }
+
+  render() {
+    const { categories, sizes, reset } = this.props;
+
+    return (
+      <ul className="filter-sidebar medium-4 large-3">
+        <li className="filter-sidebar__item__category">
+          <Accordion title="Category">
+            <CategoryFilter
+              categories={categories}
+              reset={reset}
+              toggleCategoryFilter={this.toggleCategoryFilter}
             />
-            Lifestyle
-            <span className="filter-sidebar__item__category__submenu__item__number">
-              13
-            </span>
-          </li>
-          <li className="filter-sidebar__item__category__submenu__item">
-            <input
-              className="filter-sidebar__item__category__submenu__item__checkbox"
-              type="checkbox"
-            />Running
-            <span className="filter-sidebar__item__category__submenu__item__number">
-              13
-            </span>
-          </li>
-
-          <li className="filter-sidebar__item__category__submenu__item">
-            <input
-              type="checkbox"
-              className="filter-sidebar__item__category__submenu__item__checkbox"
+          </Accordion>
+        </li>
+        <li className="filter-sidebar__item__size">
+          <Accordion title="Size">
+            <SizeFilter
+              sizes={sizes}
+              reset={reset}
+              toggleSizeFilter={this.toggleSizeFilter}
             />
-            Gym
-            <span className="filter-sidebar__item__category__submenu__item__number">
-              13
-            </span>
-          </li>
+          </Accordion>
+        </li>
+      </ul>
+    );
+  }
+}
 
-          <li className="filter-sidebar__item__category__submenu__item">
-            <input
-              className="filter-sidebar__item__category__submenu__item__checkbox"
-              type="checkbox"
-            />Clothing
-            <span className="filter-sidebar__item__category__submenu__item__number">
-              20
-            </span>
-          </li>
-
-          <li className="filter-sidebar__item__category__submenu__item">
-            <input
-              className="filter-sidebar__item__category__submenu__item__checkbox"
-              type="checkbox"
-            />Scarves
-            <span className="filter-sidebar__item__category__submenu__item__number">
-              13
-            </span>
-          </li>
-          <li className="filter-sidebar__category__item__submenu__item">
-            <input
-              className="filter-sidebar__item__category__submenu__item__checkbox"
-              type="checkbox"
-            />Accessories
-            <span className="filter-sidebar__item__category__submenu__item__number">
-              13
-            </span>
-          </li>
-        </ul>
-      </Accordion>
-    </li>
-
-    <li className="filter-sidebar__item__size">
-      <Accordion title="Size Filter" >
-        <ul className="filter-sidebar__item__size__submenu">
-          <li className="filter-sidebar__item__size__submenu__item">
-            <button className="filter-sidebar__item__size__submenu__item__button">
-              S
-            </button>
-          </li>
-          <li className="filter-sidebar__item__size__submenu__item filter-sidebar__item__size__submenu__item--active">
-            <button className="filter-sidebar__item__size__submenu__item__button">
-              M
-            </button>
-          </li>
-          <li className="filter-sidebar__item__size__submenu__item">
-            <button className="filter-sidebar__item__size__submenu__item__button">
-              X
-            </button>
-          </li>
-          <li className="filter-sidebar__item__size__submenu__item">
-            <button className="filter-sidebar__item__size__submenu__item__button">
-              L
-            </button>
-          </li>
-        </ul>
-      </Accordion>
-    </li>
-  </ul>
-);
+FiltersSidebar.propTypes = {
+  reset: PropTypes.bool.isRequired,
+  categories: PropTypes.array.isRequired,
+  sizes: PropTypes.array.isRequired,
+  filterItems: PropTypes.func.isRequired,
+};
 
 export default FiltersSidebar;

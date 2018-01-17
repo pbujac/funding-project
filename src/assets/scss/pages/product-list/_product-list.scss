@@ -1,3 +1,6 @@
 .product-list{
-  padding:  rem-calc(30) 0 0 rem-calc(30);
+  padding:  rem-calc(20);
+  @include breakpoint(large){
+    padding:  rem-calc(30) 0 0 rem-calc(30);
+  };
 }

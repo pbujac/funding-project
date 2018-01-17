@@ -22,6 +22,7 @@ export default {
       '.scss',
       '.css',
       '.jpeg',
+      '.svg',
       '.jpg',
       '.gif',
       '.png'
@@ -34,7 +35,7 @@ export default {
       Reducers: path.resolve(__dirname, 'src/js/redux/reducers'),
       Actions: path.resolve(__dirname, 'src/js/redux/actions'),
       Views: path.resolve(__dirname, 'src/js/views'),
-      Utils: path.resolve(__dirname, 'src/js/utils')
+      Utils: path.resolve(__dirname, 'src/js/utils'),
     }
   },
   module: {
@@ -60,7 +61,7 @@ export default {
         )
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
+        test: /\.(jpe?g|png|gif)$/i,
         loaders: [
           'file-loader?context=src/assets/images/&name=img/[path][name].[ext]',
           {
@@ -83,9 +84,9 @@ export default {
           }
         ],
         exclude: /node_modules/
-      },
+      }, {test: /\.svg$/, loader: 'svg-inline-loader'},
       {
-        test: /\.(eot?.+|svg?.+|ttf?.+|otf?.+|woff?.+|woff2?.+)$/,
+        test: /\.(eot?.+|ttf?.+|otf?.+|woff?.+|woff2?.+)$/,
         use: 'file-loader?name=src/assets/fonts/[name]-[hash].[ext]'
       }
     ]

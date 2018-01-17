@@ -1,0 +1,15 @@
+.checkbox {
+  display: inline-block;
+  font-size: rem-calc(14);
+  justify-content: space-between;
+  font-weight: 500;
+  transition: 0.3s;
+  &__input {
+    display: none;
+  }
+  &--active {
+    color: $blue;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+}

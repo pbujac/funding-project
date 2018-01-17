@@ -12,6 +12,7 @@ $base-border-filter: rem-calc(1) solid $light-grey;
     letter-spacing: rem-calc(1);
     height: 100%;
     display: none;
+
     &:first-child {
       border-left: $base-border-filter;
     }
@@ -19,7 +20,7 @@ $base-border-filter: rem-calc(1) solid $light-grey;
       border-right: none;
     }
     &--centered {
-      padding: 0 rem-calc(30);
+      padding: 0 rem-calc(20);
     }
     &--show-medium {
       @include breakpoint(medium) {
@@ -33,12 +34,18 @@ $base-border-filter: rem-calc(1) solid $light-grey;
     }
     &--show-small {
       display: block;
+      width: 100%;
       @include breakpoint(medium) {
         display: none;
       }
     }
     &__title {
       height: 100%;
+      &__name{
+        @include breakpoint(large) {
+          padding: 0 rem-calc(10);
+        }
+      }
       &__refresh {
         text-align: right;
         fill: $blue;
@@ -51,10 +58,12 @@ $base-border-filter: rem-calc(1) solid $light-grey;
       display: block;
       fill: $blue;
       border-right: $base-border-filter;
+      transition: all 0.3s ease;
       border-bottom: $base-border-filter;
       &--selected {
         background-color: $blue;
         color: $white;
+        fill: $white;
         font-size: rem-calc(14);
         text-transform: uppercase;
         letter-spacing: rem-calc(1);

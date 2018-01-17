@@ -1,4 +1,4 @@
-import * as type from 'Constants/FitlerConstants';
+import * as type from 'Constants/FilterConstants';
 import FilterApi from 'Api/filters/FiltersApi';
 
 export function fetchingFilters() {

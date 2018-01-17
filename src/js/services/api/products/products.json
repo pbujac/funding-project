@@ -1,0 +1,127 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Essential cotton-blend",
+      "image": "/images/products/item1.png",
+      "price": 100,
+      "discountPrice": 200,
+      "currency": "$",
+      "isSale": true,
+      "quantity": 1,
+      "category": ["Running", "Gym"],
+      "size": [
+        "L"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Flecked cotton-blend",
+      "image": "/images/products/item2.png",
+      "price": 175,
+      "currency": "$",
+      "isSale": false,
+      "quantity": 1,
+      "category": ["Lifestyle"],
+      "size": [
+        "M",
+        "L",
+        "S"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Stripper cotton t-shirt",
+      "image": "/images/products/item3.png",
+      "price": 200,
+      "currency": "$",
+      "isSale": false,
+      "quantity": 1,
+      "category": ["Running"],
+      "size": [
+        "S", "M"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Sequin star t-shirt",
+      "image": "/images/products/item4.png",
+      "price": 100,
+      "discountPrice": 200,
+      "currency": "$",
+      "isSale": true,
+      "quantity": 1,
+      "category": ["Running"],
+      "size": [
+        "S"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Ruffle sleeve t-shirt",
+      "image": "/images/products/item5.png",
+      "price": 175,
+      "currency": "$",
+      "isSale": false,
+      "quantity": 1,
+      "category": ["Gym"],
+      "size": [
+        "M"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Double layer top",
+      "image": "/images/products/item6.png",
+      "price": 200,
+      "currency": "$",
+      "isSale": false,
+      "quantity": 1,
+      "category": ["Running"],
+      "size": [
+        "M"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "V-neck cotton t-shirt",
+      "image": "/images/products/item7.png",
+      "price": 100,
+      "currency": "$",
+      "isSale": false,
+      "quantity": 1,
+      "category": ["Gym"],
+      "size": [
+        "M"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Message cotton t-shirt",
+      "image": "/images/products/item8.png",
+      "price": 100,
+      "currency": "$",
+      "isSale": false,
+      "quantity": 1,
+      "category": ["Running"],
+      "size": [
+        "M"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Nike Dry Swosh",
+      "image": "/images/products/item9.png",
+      "price": 100,
+      "discountPrice": 200,
+      "currency": "$",
+      "isSale": true,
+      "quantity": 1,
+      "category": ["Running"],
+      "size": [
+        "M",
+        "S"
+      ]
+    }
+  ]
+}
