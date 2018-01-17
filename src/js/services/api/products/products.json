@@ -22,7 +22,7 @@
       "currency": "$",
       "isSale": false,
       "quantity": 1,
-      "category": ["Lifestyle"],
+      "category": ["Lifestyle", "Gym"],
       "size": [
         "M",
         "L",
@@ -37,7 +37,7 @@
       "currency": "$",
       "isSale": false,
       "quantity": 1,
-      "category": ["Running"],
+      "category": ["Clothing"],
       "size": [
         "S", "M"
       ]
@@ -51,7 +51,7 @@
       "currency": "$",
       "isSale": true,
       "quantity": 1,
-      "category": ["Running"],
+      "category": ["Scarves"],
       "size": [
         "S"
       ]
@@ -64,7 +64,7 @@
       "currency": "$",
       "isSale": false,
       "quantity": 1,
-      "category": ["Gym"],
+      "category": ["Accessories"],
       "size": [
         "M"
       ]
@@ -77,7 +77,7 @@
       "currency": "$",
       "isSale": false,
       "quantity": 1,
-      "category": ["Running"],
+      "category": ["Shoes"],
       "size": [
         "M"
       ]
@@ -90,7 +90,7 @@
       "currency": "$",
       "isSale": false,
       "quantity": 1,
-      "category": ["Gym"],
+      "category": ["Fragrance"],
       "size": [
         "M"
       ]
@@ -103,7 +103,7 @@
       "currency": "$",
       "isSale": false,
       "quantity": 1,
-      "category": ["Running"],
+      "category": ["Football"],
       "size": [
         "M"
       ]
