@@ -1,0 +1,35 @@
+&__main {
+  transition: all 0.5s ease;
+  &__title {
+    font-size: rem-calc(18);
+    font-family: $heading-font-family;
+    margin: rem-calc(10) 0;
+    transition: all 0.5s ease;
+  }
+  &__price {
+    transition: all 0.5s ease;
+    &__discount,
+    &__real {
+      display: inline-block;
+      font-size: rem-calc(14);
+      font-weight: 600;
+      color: $light-blue;
+      transition: all 0.5s ease;
+
+    }
+    &__discount {
+      text-decoration: line-through;
+      &--no-discount {
+        display: none;
+      }
+    }
+    &__real {
+      margin-right: 2%;
+      color: $blue;
+      &--has-discount {
+        float: right;
+      }
+    }
+  }
+@import "counter-items";
+}

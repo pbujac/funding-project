@@ -7,7 +7,7 @@
     display: inline-block;
     transition: all 0.3s ease-in-out;
     width: 100%;
-    @include breakpoint(large){
+    @include breakpoint(large) {
       width: 85%;
     }
     border-bottom: rem-calc(1) solid $button-grey;
@@ -70,7 +70,7 @@
       max-height: rem-calc(450);
       transition: all 0.3s ease-in-out;
       padding: rem-calc(20) rem-calc(15);
-      @include breakpoint(large){
+      @include breakpoint(large) {
         padding: rem-calc(20) 0;
       }
 

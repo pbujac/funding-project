@@ -41,7 +41,7 @@ $base-border-filter: rem-calc(1) solid $light-grey;
     }
     &__title {
       height: 100%;
-      &__name{
+      &__name {
         @include breakpoint(large) {
           padding: 0 rem-calc(10);
         }

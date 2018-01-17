@@ -15,9 +15,9 @@
         }
         &__link {
           padding: 0;
-          @include breakpoint(small-medium){
-          padding-right: rem-calc(25);
-        }
+          @include breakpoint(small-medium) {
+            padding-right: rem-calc(25);
+          }
         }
       }
     }
