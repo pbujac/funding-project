@@ -1,6 +1,0 @@
-@import '~foundation-sites/scss/foundation';
-
-$breakpoints: ( small: 0, small-medium: 480px, medium: 767px, large: 1193px, xlarge: 1200px, xxlarge: 1440px, );
-
-@include foundation-xy-grid-classes;
-@include foundation-visibility-classes;

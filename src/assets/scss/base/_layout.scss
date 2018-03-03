@@ -1,5 +1,4 @@
 html {
-    background-color: $viewport-background-color;
     box-sizing: border-box;
 }
 
@@ -16,10 +15,4 @@ body {
 
 body {
     margin: 0;
-}
-.container {
-  padding: 0 3%;
-  @include mobile-tablet {
-    padding: 0;
-  }
 }

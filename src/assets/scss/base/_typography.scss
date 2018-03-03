@@ -1,8 +1,4 @@
 html {
-    color: $base-font-color;
-    font-family: $base-font-family;
-    font-size: 100%;
-    line-height: $base-line-height;
 }
 
 h1,
@@ -11,34 +7,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $heading-font-family;
-    margin: 0;
 }
 
 p {
-    margin: 0 0 $small-spacing;
 }
 
 a {
-    color: $white;
-    text-decoration: none;
-    fill: $white;
-    padding: 0 rem-calc(14);
-    letter-spacing: rem-calc(1);
-    transition: color $base-duration $base-timing;
-    &:hover {
-        color: shade($action-color, 25%);
-    }
-    &:focus {
-        outline: $focus-outline;
-        outline-offset: $focus-outline-offset;
-    }
 }
 
 hr {
-    border-bottom: $base-border;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
-    margin: $base-spacing 0;
 }

@@ -1,6 +1,6 @@
 {
-  "short_name": "tacit",
-  "name": "Product List Page Task",
+  "short_name": "fundraising",
+  "name": "Fundraising",
   "start_url": "./index.html",
   "display": "standalone"
 }

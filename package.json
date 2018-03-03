@@ -1,7 +1,7 @@
 {
-  "name": "tacit",
+  "name": "funding-project",
   "version": "1.0.0",
-  "description": "Product List Page Task",
+  "description": "Fundraising",
   "main": "index.js",
   "private": true,
   "scripts": {
